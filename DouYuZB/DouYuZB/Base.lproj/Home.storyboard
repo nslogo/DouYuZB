@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="B6o-kV-ojW">
             <objects>
-                <viewController id="3Im-jx-jJE" sceneMemberID="viewController">
+                <viewController id="3Im-jx-jJE" customClass="HomeViewController" customModule="DouYuZB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Xl-Cr-Bk9"/>
                         <viewControllerLayoutGuide type="bottom" id="EGX-3O-OOr"/>
@@ -31,7 +31,6 @@
                     <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" id="0a9-RL-SY6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lcE-LQ-hSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
