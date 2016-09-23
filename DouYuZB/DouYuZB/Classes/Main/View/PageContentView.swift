@@ -41,7 +41,6 @@ class PageContentView: UIView {
         collectionView.scrollsToTop = false
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
         return collectionView
-        
     }()
     
     init(frame: CGRect, childVCs : [UIViewController], parentViewController : UIViewController ) {

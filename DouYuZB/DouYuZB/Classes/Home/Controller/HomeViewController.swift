@@ -25,12 +25,14 @@ class HomeViewController: UIViewController {
     //pageContentView
     fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         
-        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
         //确定所有的子控制器
         var childVCs = [UIViewController]()
-        for _ in 0..<4 {
+        var recomeVC : RecommendViewController = RecommendViewController()
+        childVCs.append(recomeVC)
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
@@ -41,6 +43,18 @@ class HomeViewController: UIViewController {
         return contentView
     }()
     
+    //private let kItemMargin : CGFloat = 10
+    //private let kItemW : CGFloat = (kScreenW - 3 * kItemMargin) / 2
+    
+    //fileprivate lazy var collectionView : UICollectionView = {[weak self] in
+    
+        //创建布局
+       // let layout = UICollectionViewFlowLayout()
+        //layout.itemSize = CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+    
+   // }()
+    
+    
     //MARK : - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +62,6 @@ class HomeViewController: UIViewController {
         //设置UI界面
         setupUI()
     }
-
-
-    
 }
 
 // MARK: - 设置UI界面
@@ -91,8 +102,6 @@ extension HomeViewController {
     
     }
 }
-
-
 
 // MARK: - 遵守的PageTitleViewDelegate协议 
 extension HomeViewController : PageTitleViewDelegate {
